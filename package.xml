@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
     <name>Payment_Reembolso</name>
-    <version>0.1.4</version>
+    <version>0.1.5</version>
     <stability>stable</stability>
     <license uri="http://www.opensource.org/licenses/osl-3.0.php">OSL v3.0</license>
     <channel>community</channel>
@@ -10,20 +10,18 @@
     <description>It establishes different amount for the amount of the purchase. If it is minor that the Certain amount, the amount of the service will be a fixed value; if the amount is major that the Certain amount, the amount of the service will be a percentage of the same one.
 To do:
 Set from the control panel the fixed value, the value percentage and the Certain amount.</description>
-    <notes>*	Add translate file
-*	Adds different custom message
+    <notes>*	Fix error, not work version 0.1.4
+*	Change message text
 
 &lt;b&gt;CHANGES:&lt;/b&gt;
-	-&gt;A	app/locale/es_ES/Mage_Reembolso.csv
-	-&gt;U	app/code/local/Mage/Reembolso/etc/system.xml
 	-&gt;U	app/code/local/Mage/Reembolso/Model/Reembolso.php
-	-&gt;U	app/code/local/Mage/Reembolso/etc/config.xml
+	-&gt;U	app/code/local/Mage/Reembolso/Model/Quote.php
 	-&gt;U	app/design/frontend/default/default/template/reembolso/form.phtml
 	-&gt;U	app/design/frontend/default/default/template/reembolso/info.phtml</notes>
     <authors><author><name>Sophie</name><user>auto-converted</user><email>lalyostres@gmail.com</email></author><author><name>Manuel</name><user>auto-converted</user><email>manuelcanepa@gmail.com</email></author></authors>
-    <date>2008-12-03</date>
-    <time>14:57:46</time>
-    <contents><target name="magedesign"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="template"><dir name="reembolso"><file name="form.phtml" hash="ce75a81d61ec34a17aafc9f8c3b22dcc"/><file name="info.phtml" hash="57dfa8759788a77326a833603cb978e6"/></dir></dir></dir></dir></dir><dir name="frontend"><dir name="default"><dir name="default"><dir name="template"><dir name="reembolso"><file name="form.phtml" hash="5f5fbdb3061101cbb748a01268a6c29a"/><file name="info.phtml" hash="19d5379474940351367f3459822c1810"/></dir></dir></dir></dir></dir></target><target name="magelocale"><dir name="es_ES"><file name="Mage_Reembolso.csv" hash="42e01f656ee2d0223e95e10ed54b26ce"/></dir></target><target name="magelocal"><dir name="Mage"><dir name="Reembolso"><dir name="Block"><file name="Form.php" hash="21f1e325029d98571ec884bca2234e65"/><file name="Info.php" hash="33f48eab752f05362c553b63de5d9c42"/></dir><dir name="etc"><file name="config.xml" hash="7c46dc9ef3f9811fe3cf40de917a6656"/><file name="system.xml" hash="8e1bf64b00d65ed46452f359e9b8ae01"/></dir><dir name="Helper"><file name="Data.php" hash="1445d2b92929e66446fe0c1ae4620d55"/></dir><dir name="Model"><file name="Quote.php" hash="6059126218ee9aa9f3a6c18e41ef6255"/><file name="Reembolso.php" hash="783d6cd48a4350c7cb196b2f834dab7a"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Reembolso.xml" hash="a5a370ae7cb7f2b0f72b15e7d500f47d"/></dir></target></contents>
+    <date>2008-12-05</date>
+    <time>09:18:18</time>
+    <contents><target name="magedesign"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="template"><dir name="reembolso"><file name="form.phtml" hash="ce75a81d61ec34a17aafc9f8c3b22dcc"/><file name="info.phtml" hash="57dfa8759788a77326a833603cb978e6"/></dir></dir></dir></dir></dir><dir name="frontend"><dir name="default"><dir name="default"><dir name="template"><dir name="reembolso"><file name="form.phtml" hash="cdc021084d6bdf947fb5119242bae56e"/><file name="info.phtml" hash="65dad5a1fdbd665a48652ed66abc5cb6"/></dir></dir></dir></dir></dir></target><target name="magelocale"><dir name="es_ES"><file name="Mage_Reembolso.csv" hash="42e01f656ee2d0223e95e10ed54b26ce"/></dir></target><target name="magelocal"><dir name="Mage"><dir name="Reembolso"><dir name="Block"><file name="Form.php" hash="21f1e325029d98571ec884bca2234e65"/><file name="Info.php" hash="33f48eab752f05362c553b63de5d9c42"/></dir><dir name="etc"><file name="config.xml" hash="7c46dc9ef3f9811fe3cf40de917a6656"/><file name="system.xml" hash="8e1bf64b00d65ed46452f359e9b8ae01"/></dir><dir name="Helper"><file name="Data.php" hash="1445d2b92929e66446fe0c1ae4620d55"/></dir><dir name="Model"><file name="Quote.php" hash="6059126218ee9aa9f3a6c18e41ef6255"/><file name="Reembolso.php" hash="c12f04e6c635318e0fb1e8c35ecb5093"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Reembolso.xml" hash="a5a370ae7cb7f2b0f72b15e7d500f47d"/></dir></target></contents>
     <compatible/>
     <dependencies/>
 </package>

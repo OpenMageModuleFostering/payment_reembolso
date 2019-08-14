@@ -6,14 +6,35 @@ class Mage_Reembolso_Model_Reembolso extends Mage_Payment_Model_Method_Abstract 
 	protected $_formBlockType = 'reembolso/form';
 	protected $_infoBlockType = 'reembolso/info';
 
-	protected function __contruct(){
-			$this->setReembolsoTitle($this->getConfigData('title'));
-			$this->setValorTope($this->getConfigData('montotope'));
-			$this->setValorInferior($this->getConfigData('valorinferior'));
-			$this->setValorSuperior($this->getConfigData('valorsuperior'));
-			$this->setValInfFix($this->getConfigData('valinffix'));
-			$this->setValSupFix($this->getConfigData('valsupfix'));
-			$this->setCustomTextForm($this->getConfigData('customtextform'));
-			$this->setCustomTextInfo($this->getConfigData('customtextinfo'));
+	public function getReembolsoTitle(){
+		return $this->getConfigData('title');
+	}
+
+	public function getValorTope(){
+		return $this->getConfigData('montotope');
+	}
+
+	public function getValorInferior(){
+		return $this->getConfigData('valorinferior');
+	}
+
+	public function getValorSuperior(){
+		return $this->getConfigData('valorsuperior');
+	}
+
+	public function getValInfFix() {
+		return $this->getConfigData('valinffix');
+	}
+
+	public function getValSupFix(){
+		return $this->getConfigData('valsupfix');
+	}
+
+	public function getCustomTextForm(){
+		return $this->getConfigData('customtextform');
+	}
+
+	public function getCustomTextInfo(){
+		return $this->getConfigData('customtextinfo');
 	}
 }
