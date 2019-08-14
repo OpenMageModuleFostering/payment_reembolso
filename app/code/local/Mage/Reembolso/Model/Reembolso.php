@@ -36,4 +36,8 @@ class Mage_Reembolso_Model_Reembolso extends Mage_Payment_Model_Method_Abstract 
 	public function getValSupFix(){
 		return $this->getConfigData('valsupfix');
 	}
+	public function getCustomText()
+    {
+        return $this->getConfigData('customtext');
+    }
 }
