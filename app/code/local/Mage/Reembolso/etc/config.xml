@@ -1,47 +1,134 @@
 <?xml version="1.0"?>
 <config>
+    <modules>
+        <Mage_Reembolso>
+            <version>0.1.0</version>
+        </Mage_Reembolso>
+    </modules>
+	
 	<global>
-		<models>
-			<reembolso>
-				<class>Mage_Reembolso_Model</class>
-			</reembolso>
+        <models>
 			<sales>
 				<rewrite>
 					<quote>Mage_Reembolso_Model_Quote</quote>
 				</rewrite>
-			</sales> 
-		</models>
-
-		<resources>
-			<reembolso_setup>
-				<setup>
+			</sales>
+            <reembolso>
+                <class>Mage_Reembolso_Model</class>
+                <resourceModel>reembolso_mysql4</resourceModel>
+            </reembolso>
+            <reembolso_mysql4>
+                <class>Mage_Reembolso_Model_Mysql4</class>
+                <entities>
+                    <reembolso>
+                        <table>reembolso</table>
+                    </reembolso>
+                </entities>
+            </reembolso_mysql4>
+        </models>
+        <resources>
+            <reembolso_setup>
+                <setup>
+                    <module>Mage_Reembolso</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </reembolso_setup>
+            <reembolso_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </reembolso_write>
+            <reembolso_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </reembolso_read>
+        </resources>
+        <blocks>
+            <reembolso>
+                <class>Mage_Reembolso_Block</class>
+            </reembolso>
+        </blocks>
+        <helpers>
+            <reembolso>
+                <class>Mage_Reembolso_Helper</class>
+            </reembolso>
+        </helpers>
+    </global>
+	
+    <frontend>
+        <routers>
+            <reembolso>
+                <use>standard</use>
+                <args>
+                    <module>Mage_Reembolso</module>
+                    <frontName>reembolso</frontName>
+                </args>
+            </reembolso>
+        </routers>
+        <layout>
+            <updates>
+                <reembolso>
+                    <file>reembolso.xml</file>
+                </reembolso>
+            </updates>
+        </layout>
+    </frontend>
+	
+    <admin>
+        <routers>
+			<reembolso>
+				<use>admin</use>
+				<args>
 					<module>Mage_Reembolso</module>
-				</setup>
-				<connection>
-					<use>core_setup</use>
-				</connection>
-			</reembolso_setup>
-			<reembolso_write>
-				<use>core_write</use>
-			</reembolso_write>
-			<reembolso_read>
-				<use>core_read</use>
-			</reembolso_read>
-		</resources>
-	</global>
-
-	<adminhtml>
-		<translate>
-			<modules>
-				<Mage_Reembolso>
-					<files>
-						<default>Mage_Reembolso.csv</default>
-					</files>
-				</Mage_Reembolso>
-			</modules>
-		</translate>
-	</adminhtml>
-
+					<frontName>reembolso</frontName>
+				</args>
+			</reembolso>
+        </routers>
+    </admin>
+	
+    <adminhtml>
+		<menu>
+			<sales>
+				<children>
+					<tax>
+						<children>
+							<reembolso module="reembolso">
+								<title>Reembolso</title>
+								<sort_order>71</sort_order>               
+								<action>reembolso/adminhtml_reembolso</action>
+							</reembolso>
+						</children>
+					</tax>
+				</children>
+			</sales>
+		</menu>
+		<acl>
+			<resources>
+				<all>
+					<title>Allow Everything</title>
+				</all>
+				<admin>
+					<children>
+						<Mage_Reembolso>
+							<title> Reembolso Module</title>
+							<sort_order>10</sort_order>
+						</Mage_Reembolso>
+					</children>
+				</admin>
+			</resources>
+		</acl>
+		<layout>
+			<updates>
+				<reembolso>
+					<file>reembolso.xml</file>
+				</reembolso>
+			</updates>
+		</layout>
+    </adminhtml>
+	
 	<default>
 		<payment>
 			<reembolso>

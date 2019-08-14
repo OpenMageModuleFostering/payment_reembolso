@@ -6,7 +6,15 @@
 		</tr>
 		<?php } else { ?>
 		<tr>
-			<td><?php echo $this->__('El pago ser&aacute; realizado en la direcci&oacute;n de destino') ?></td>
+			<td>
+			<?php
+			echo $this->__('El pago ser&aacute; realizado en la direcci&oacute;n de destino a traves de ');
+			echo $this->getMethod()->getReembolsoTitle() . ".";
+			$data	= $this->getMethod()->getShippMethod();
+			echo "<br/><strong>".$this->__('Costo: ');
+			echo Mage::helper('checkout')->formatPrice($data['total_shipping'])."</strong>";
+			?>
+			</td>
 		</tr>
 		<?php } ?>
 	</table>

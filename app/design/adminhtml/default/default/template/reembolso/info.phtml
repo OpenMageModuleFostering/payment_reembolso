@@ -1,1 +1,4 @@
-<p><?php echo $this->__('Pago contra reembolso') ?></p>
+<?php echo $this->getMethod()->getTitle() ?><br /><br/>
+<?php if ($this->getMethod()->getCustomText()): ?>
+    <?php echo $this->getMethod()->getCustomText() ?><br />
+<?php endif; ?>

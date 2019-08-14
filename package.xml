@@ -1,27 +1,39 @@
 <?xml version="1.0"?>
 <package>
     <name>Payment_Reembolso</name>
-    <version>0.1.5</version>
+    <version>0.2.0</version>
     <stability>stable</stability>
     <license uri="http://www.opensource.org/licenses/osl-3.0.php">OSL v3.0</license>
     <channel>community</channel>
     <extends/>
-    <summary>This is the cash on deluvery paument method.</summary>
-    <description>It establishes different amount for the amount of the purchase. If it is minor that the Certain amount, the amount of the service will be a fixed value; if the amount is major that the Certain amount, the amount of the service will be a percentage of the same one.
-To do:
-Set from the control panel the fixed value, the value percentage and the Certain amount.</description>
-    <notes>*	Fix error, not work version 0.1.4
-*	Change message text
+    <summary>This is the cash on delyvery payment method.</summary>
+    <description>ES | Reembolso permite configurar los reembolsos de todos los metodos de envio que tengamos instalados en nuestra tienda Magento. Reembolso calcula el valor que se debe abonar mediante este m&#xE9;todo de pago. Por cada reembolso se debe ingresar un titulo, el metodo de envio al cual se le va a aplicar el reembolso, el tipo (si es fijo o variable), el valor del reembolso y el importe a partir del cual se va a seleccionar que valor se le aplica al monto final.
 
-&lt;b&gt;CHANGES:&lt;/b&gt;
-	-&gt;U	app/code/local/Mage/Reembolso/Model/Reembolso.php
-	-&gt;U	app/code/local/Mage/Reembolso/Model/Quote.php
-	-&gt;U	app/design/frontend/default/default/template/reembolso/form.phtml
-	-&gt;U	app/design/frontend/default/default/template/reembolso/info.phtml</notes>
-    <authors><author><name>Sophie</name><user>auto-converted</user><email>lalyostres@gmail.com</email></author><author><name>Manuel</name><user>auto-converted</user><email>manuelcanepa@gmail.com</email></author></authors>
-    <date>2008-12-05</date>
-    <time>09:18:18</time>
-    <contents><target name="magedesign"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="template"><dir name="reembolso"><file name="form.phtml" hash="ce75a81d61ec34a17aafc9f8c3b22dcc"/><file name="info.phtml" hash="57dfa8759788a77326a833603cb978e6"/></dir></dir></dir></dir></dir><dir name="frontend"><dir name="default"><dir name="default"><dir name="template"><dir name="reembolso"><file name="form.phtml" hash="cdc021084d6bdf947fb5119242bae56e"/><file name="info.phtml" hash="65dad5a1fdbd665a48652ed66abc5cb6"/></dir></dir></dir></dir></dir></target><target name="magelocale"><dir name="es_ES"><file name="Mage_Reembolso.csv" hash="42e01f656ee2d0223e95e10ed54b26ce"/></dir></target><target name="magelocal"><dir name="Mage"><dir name="Reembolso"><dir name="Block"><file name="Form.php" hash="21f1e325029d98571ec884bca2234e65"/><file name="Info.php" hash="33f48eab752f05362c553b63de5d9c42"/></dir><dir name="etc"><file name="config.xml" hash="7c46dc9ef3f9811fe3cf40de917a6656"/><file name="system.xml" hash="8e1bf64b00d65ed46452f359e9b8ae01"/></dir><dir name="Helper"><file name="Data.php" hash="1445d2b92929e66446fe0c1ae4620d55"/></dir><dir name="Model"><file name="Quote.php" hash="6059126218ee9aa9f3a6c18e41ef6255"/><file name="Reembolso.php" hash="c12f04e6c635318e0fb1e8c35ecb5093"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Reembolso.xml" hash="a5a370ae7cb7f2b0f72b15e7d500f47d"/></dir></target></contents>
+EN | Refund allows users to set up refunds for all shipping methods installed in our Magento store. Refund determines the value the user must pay by using this payment method. For each refund you must enter a title, the refund shipping method, the refund type (either fixed or variable), the refund value and the amount from which the value applied to the total amount will be selected.</description>
+    <notes>&lt;b&gt;CHANGES:&lt;/b&gt;
+	-&gt;A app/code/local/Mage/Reembolso/Block/Adminhtml/Reembolso.php
+	-&gt;A app/code/local/Mage/Reembolso/Block/Adminhtml/Reembolso/Grid.php
+	-&gt;A app/code/local/Mage/Reembolso/Block/Adminhtml/Reembolso/Edit.php
+	-&gt;A app/code/local/Mage/Reembolso/Block/Adminhtml/Reembolso/Edit/Tabs.php
+	-&gt;A app/code/local/Mage/Reembolso/Block/Adminhtml/Reembolso/Edit/Form.php
+	-&gt;A app/code/local/Mage/Reembolso/Block/Adminhtml/Reembolso/Edit/Tab/Form.php
+	-&gt;A app/code/local/Mage/Reembolso/controllers/Adminhtml/ReembolsoController.php
+	-&gt;U app/code/local/Mage/Reembolso/etc/config.xml
+	-&gt;U app/code/local/Mage/Reembolso/etc/system.xml
+	-&gt;A app/code/local/Mage/Reembolso/Model/Adminhtml/Status.php
+	-&gt;A app/code/local/Mage/Reembolso/Model/Adminhtml/Reembolso.php
+	-&gt;A app/code/local/Mage/Reembolso/Model/Mysql4/Reembolso.php
+	-&gt;A app/code/local/Mage/Reembolso/Model/Mysql4/Reembolso/Collection.php
+	-&gt;U app/code/local/Mage/Reembolso/Model/Quote.php
+	-&gt;U app/code/local/Mage/Reembolso/Model/Reembolso.php
+	-&gt;A app/code/local/Mage/Reembolso/sql/reembolso_setup/mysql4-install-0.1.0.php
+	-&gt;U app/design/frontend/default/default/template/reembolso/form.phtml
+	-&gt;U app/design/frontend/default/default/template/reembolso/info.phtml
+	-&gt;U app/design/adminhtml/default/default/layout/reembolso.xml</notes>
+    <authors><author><name>Sophie</name><user>auto-converted</user><email>lalyostres@gmail.com</email></author><author><name>Manuel</name><user>auto-converted</user><email>manuelcanepa@gmail.com</email></author><author><name>Gaspar Mac</name><user>auto-converted</user><email>gasparmac@gmail.com</email></author></authors>
+    <date>2009-02-13</date>
+    <time>10:34:53</time>
+    <contents><target name="magedesign"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="layout"><file name="reembolso.xml" hash="c70542d55d3c5486dfe96d62d62b38c2"/></dir><dir name="template"><dir name="reembolso"><file name="form.phtml" hash="a0299c5836ce66e8748328a918fdb1d8"/><file name="info.phtml" hash="308cfe38ecfbe667beee4618b40e6b33"/></dir></dir></dir></dir></dir><dir name="frontend"><dir name="default"><dir name="default"><dir name="template"><dir name="reembolso"><file name="form.phtml" hash="aa973739122a483aca2ddfc6d1fd902f"/><file name="info.phtml" hash="28b00b8074bdf7cabed24d30911eb5b4"/></dir></dir></dir></dir></dir></target><target name="magelocale"><dir name="es_ES"><file name="Mage_Reembolso.csv" hash="42e01f656ee2d0223e95e10ed54b26ce"/></dir></target><target name="magelocal"><dir name="Mage"><dir name="Reembolso"><dir name="Block"><dir name="Adminhtml"><dir name="Reembolso"><dir name="Edit"><dir name="Tab"><file name="Form.php" hash="01a74473e969de469badea3afcc4d93c"/></dir><file name="Form.php" hash="a255a1faec8bd6827af597faa26ab479"/><file name="Tabs.php" hash="5cde7719cc092d44345454537eea652a"/></dir><file name="Edit.php" hash="48be62d8c1b09560fd5d876ee592b4e1"/><file name="Grid.php" hash="45e4cdff8d222d8f985f2975a064283a"/></dir><file name="Reembolso.php" hash="405131c5f3c12f61e6fde5089a030bc7"/></dir><file name="Form.php" hash="5374b819bbb8aa88127fda1122f7b2e8"/><file name="Info.php" hash="7bcb79c4df796dea63a2ac00ea991422"/><file name="Reembolso.php" hash="0db6644de2cfdc8dc7badb2cb8a84b23"/></dir><dir name="controllers"><dir name="Adminhtml"><file name="ReembolsoController.php" hash="8724a1fb8ae96f1111807588386b45e2"/></dir><file name="IndexController.php" hash="637815ee5aa7d6b9253ec713abfd559e"/></dir><dir name="etc"><file name="config.xml" hash="08ac3fd8cc285ae94e482bf9ab075b12"/><file name="system.xml" hash="462888971106de537e8618190d352bac"/></dir><dir name="Helper"><file name="Data.php" hash="981e6afa35c5a3b2a2a93cd032dda366"/></dir><dir name="Model"><dir name="Adminhtml"><file name="Reembolso.php" hash="094caad3d400d674dad90528eb3ef7ea"/><file name="Status.php" hash="738364aabca63cc0ab1227f372cbd1c0"/></dir><dir name="Mysql4"><dir name="Reembolso"><file name="Collection.php" hash="6be9cec7d9098472f1514bc0b3189035"/></dir><file name="Reembolso.php" hash="5e4d2cadd46fdf0e919f6402c78ed985"/></dir><file name="Quote.php" hash="49051c6e369921f1de5835b780a30da9"/><file name="Reembolso.php" hash="cca1fcd38fb94d55ec75f53646e8790c"/></dir><dir name="sql"><dir name="reembolso_setup"><file name="mysql4-install-0.1.0.php" hash="66e352a38f890bce4c7173a1ce4c71e4"/></dir></dir><file name="INFO-reembolso.txt" hash="d8d8daf56685ebca48267cb516abc198"/></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Reembolso.xml" hash="142e434873aea670fe99f6e83f35a44b"/></dir></target></contents>
     <compatible/>
     <dependencies/>
 </package>

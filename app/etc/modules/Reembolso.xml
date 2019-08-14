@@ -1,5 +1,4 @@
 <?xml version="1.0"?>
-
 <config>
 	<modules>
 	<!-- declare Mage_Reembolso module -->
@@ -8,10 +7,6 @@
 			<active>true</active>
 			<!-- this module will be located in app/code/local code pool -->
 			<codePool>local</codePool>
-			<!-- specify dependencies for correct module loading order -->
-			<depends>
-				<Mage_Payment />
-			</depends>
 			<!-- declare module's version information for database updates -->
 			<version>0.1.0</version>
 		</Mage_Reembolso>
