@@ -14,16 +14,24 @@
 							<label>Enabled</label>
 							<frontend_type>select</frontend_type>
 							<source_model>adminhtml/system_config_source_yesno</source_model>
-							<sort_order>1</sort_order>
+							<sort_order>10</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
 							<show_in_store>0</show_in_store>
 						</active>
+						<title translate="label">
+							<label>Title</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</title>
 						<order_status translate="label">
 							<label>New order status</label>
 							<frontend_type>select</frontend_type>
 							<source_model>adminhtml/system_config_source_order_status</source_model>
-							<sort_order>4</sort_order>
+							<sort_order>30</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
 							<show_in_store>0</show_in_store>
@@ -31,7 +39,7 @@
 						<allowspecific translate="label">
 							<label>Payment from applicable countries</label>
 							<frontend_type>allowspecific</frontend_type>
-							<sort_order>50</sort_order>
+							<sort_order>40</sort_order>
 							<source_model>adminhtml/system_config_source_payment_allspecificcountries</source_model>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
@@ -40,46 +48,56 @@
 						<specificcountry translate="label">
 							<label>Payment from Specific countries</label>
 							<frontend_type>multiselect</frontend_type>
-							<sort_order>51</sort_order>
+							<sort_order>50</sort_order>
 							<source_model>adminhtml/system_config_source_country</source_model>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
 							<show_in_store>1</show_in_store>
 						</specificcountry>
-						<!--
-						<valorfijo translate="label">
-							<label>Valor Fijo</label>
-							<frontend_type>text</frontend_type>
-							<sort_order>54</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>1</show_in_website>
-							<show_in_store>0</show_in_store>
-						</valorfijo>
-						<valorporcentaje translate="label">
-							<label>Valor Porcentaje</label>
-							<frontend_type>text</frontend_type>
-							<sort_order>55</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>1</show_in_website>
-							<show_in_store>0</show_in_store>
-						</valorporcentaje>
 						<montotope translate="label">
 							<label>Monto Tope</label>
 							<frontend_type>text</frontend_type>
-							<sort_order>56</sort_order>
+							<sort_order>60</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
 							<show_in_store>0</show_in_store>
 						</montotope>
-						-->
-						<title translate="label">
-							<label>Title</label>
+						<valorinferior translate="label">
+							<label>Valor Inferior</label>
 							<frontend_type>text</frontend_type>
-							<sort_order>2</sort_order>
+							<sort_order>70</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
 							<show_in_store>0</show_in_store>
-						</title>
+						</valorinferior>
+						<valinffix translate="label comment">
+							<label>V. Inferior Fijo</label>
+							<comment>No en Fijo sera tomado como Porcentaje</comment>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>71</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</valinffix>
+						<valorsuperior translate="label">
+							<label>Valor Superior</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>80</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</valorsuperior>
+						<valsupfix translate="label comment">
+							<label>V. Superior Fijo</label>
+							<comment>No en Fijo sera tomado como Porcentaje</comment>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>81</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</valsupfix>
 					</fields>
 				</reembolso>
 			</groups>

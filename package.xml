@@ -1,21 +1,26 @@
 <?xml version="1.0"?>
 <package>
     <name>Payment_Reembolso</name>
-    <version>0.1.1</version>
+    <version>0.1.2</version>
     <stability>stable</stability>
     <license uri="http://www.opensource.org/licenses/osl-3.0.php">OSL v3.0</license>
     <channel>community</channel>
     <extends/>
     <summary>This is the cash on deluvery paument method.</summary>
-    <description>This is the cash on deluvery paument method.</description>
-    <notes>*	Change value for the percentage from %30 to %3
+    <description>It establishes different amount for the amount of the purchase. If it is minor that the Certain amount, the amount of the service will be a fixed value; if the amount is major that the Certain amount, the amount of the service will be a percentage of the same one.
+To do:
+Set from the control panel the fixed value, the value percentage and the Certain amount.</description>
+    <notes>*	Changes: set from control panel the "Certain amount", "low value" and "top value". Last these can be formed like fixed or percentages.
 
-CHANGES:
-	-&gt;U	app/code/local/Mage/Reembolso/Model/Quote.php</notes>
+CHANGES: 
+	-&gt;U	app/code/local/Mage/Reembolso/Model/Quote.php
+	-&gt;U	app/code/local/Mage/Reembolso/Model/Reembolso.php
+	-&gt;U	app/code/local/Mage/Reembolso/etc/system.xml
+	-&gt;U	app/code/local/Mage/Reembolso/etc/config.xml</notes>
     <authors><author><name>Sophie</name><user>auto-converted</user><email>lalyostres@gmail.com</email></author></authors>
-    <date>2008-11-27</date>
-    <time>14:25:00</time>
-    <contents><target name="magedesign"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="template"><dir name="reembolso"><file name="form.phtml" hash="ce75a81d61ec34a17aafc9f8c3b22dcc"/><file name="info.phtml" hash="57dfa8759788a77326a833603cb978e6"/></dir></dir></dir></dir></dir><dir name="frontend"><dir name="default"><dir name="default"><dir name="template"><dir name="reembolso"><file name="form.phtml" hash="ce75a81d61ec34a17aafc9f8c3b22dcc"/><file name="info.phtml" hash="57dfa8759788a77326a833603cb978e6"/></dir></dir></dir></dir></dir></target><target name="magelocal"><dir name="Mage"><dir name="Reembolso"><dir name="Block"><file name="Form.php" hash="21f1e325029d98571ec884bca2234e65"/><file name="Info.php" hash="33f48eab752f05362c553b63de5d9c42"/></dir><dir name="etc"><file name="config.xml" hash="6866fb126837a315dce261f387e788d7"/><file name="system.xml" hash="8cb199800d02e44e7f2813f620b018f4"/></dir><dir name="Model"><file name="Quote.php" hash="385341a02c5bc2d4b460149972fe364a"/><file name="Reembolso.php" hash="4773fdb5ab216ba96bf91f8105b46404"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Reembolso.xml" hash="a5a370ae7cb7f2b0f72b15e7d500f47d"/></dir></target></contents>
+    <date>2008-11-28</date>
+    <time>13:13:03</time>
+    <contents><target name="magedesign"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="template"><dir name="reembolso"><file name="form.phtml" hash="ce75a81d61ec34a17aafc9f8c3b22dcc"/><file name="info.phtml" hash="57dfa8759788a77326a833603cb978e6"/></dir></dir></dir></dir></dir><dir name="frontend"><dir name="default"><dir name="default"><dir name="template"><dir name="reembolso"><file name="form.phtml" hash="ce75a81d61ec34a17aafc9f8c3b22dcc"/><file name="info.phtml" hash="57dfa8759788a77326a833603cb978e6"/></dir></dir></dir></dir></dir></target><target name="magelocal"><dir name="Mage"><dir name="Reembolso"><dir name="Block"><file name="Form.php" hash="21f1e325029d98571ec884bca2234e65"/><file name="Info.php" hash="33f48eab752f05362c553b63de5d9c42"/></dir><dir name="etc"><file name="config.xml" hash="73c38c018475f948b5a1813ba9f90de7"/><file name="system.xml" hash="f07e5ae4fe9c2abfee4fc9c1eb2b461c"/></dir><dir name="Model"><file name="Quote.php" hash="184e58bdc10e73a0ade664e55d43b7ec"/><file name="Reembolso.php" hash="fdcd844693227fe26b3272ba3052819b"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Reembolso.xml" hash="a5a370ae7cb7f2b0f72b15e7d500f47d"/></dir></target></contents>
     <compatible/>
     <dependencies/>
 </package>

@@ -30,18 +30,6 @@
         </resources>
     </global>
 
-    <default>
-        <payment>
-            <reembolso>
-                <active>1</active>
-                <model>reembolso/reembolso</model>
-                <order_status>1</order_status>
-                <title>Reembolso</title>
-                <allowspecific>0</allowspecific>
-            </reembolso>
-         </payment>
-    </default>
-
     <adminhtml>       
         <translate>
             <modules>
@@ -65,4 +53,22 @@
             </modules>
         </translate>        
     </frontend> 
+
+    <default>
+        <payment>
+            <reembolso>
+                <active>1</active>
+                <model>reembolso/reembolso</model>
+                <order_status>1</order_status>
+                <title>Reembolso</title>
+                <allowspecific>0</allowspecific>
+                <valorinferior>3</valorinferior>
+                <valinffix>1</valinffix>
+                <valorsuperior>3</valorsuperior>
+                <valsupfix>0</valsupfix>
+                <montotope>100</montotope>
+            </reembolso>
+         </payment>
+    </default>
+
 </config>

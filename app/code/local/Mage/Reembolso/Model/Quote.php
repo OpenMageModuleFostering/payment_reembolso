@@ -3,11 +3,22 @@ class Mage_Reembolso_Model_Quote extends Mage_Sales_Model_Quote {
 
 	public function getAmount() {
 		$totals	=	parent::getTotals();
-		$subtotal	=	$totals['subtotal']->getData('value');
-		if($subtotal < 100){
-			$amount	=	3;
+		$subtotal	= $this->getSubTotalAmount();				//tomo el valor de la compra....
+		//$totals['subtotal']->getData('value');		
+		$valores = Mage::getModel('reembolso/reembolso');
+		$val = $valores->getValorTope();							//tomo el valor tope contra el cual comparar...
+		if($subtotal < $val){ 										
+			if($valores->getValInfFix() == '1'){				//si el valor inferior es fijo.....
+				$amount	= $valores->getValorInferior();
+			}else{													//si el velor inferior es porcentaje....
+				$amount = ($subtotal * $valores->getValorInferior())/ 100;
+			}
 		} else {
-			$amount	=	$subtotal * 0.03;
+			if($valores->getValSupFix() == '1'){
+				$amount	= $valores->getValorSuperior();
+			}else{
+				$amount = ($subtotal * $valores->getValorSuperior())/100;
+			}
 		}
 		return $amount;
 	}
@@ -31,7 +42,8 @@ class Mage_Reembolso_Model_Quote extends Mage_Sales_Model_Quote {
 
 		if (!is_null($this->_payments) && $this->getPayment()->hasMethodInstance() && $this->getPayment()->getMethodInstance()->getCode() == 'reembolso') {
 			foreach ($res->getAllShippingAddresses() as $address) {
-
+				
+				$this->setSubTotalAmount($address->getGrandTotal() - $address->getShippingAmount());
 				$sum_amount	=	$this->getAmount();
 
 				$address->setShippingAmount($address->getShippingAmount() + $address->getShippingTaxAmount() + $sum_amount);

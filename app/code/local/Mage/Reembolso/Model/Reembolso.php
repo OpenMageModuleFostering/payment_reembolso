@@ -19,6 +19,21 @@ class Mage_Reembolso_Model_Reembolso extends Mage_Payment_Model_Method_Abstract 
 	}
 
 	public function getValorTope() {
-		return $this->getConfigData('valortope');
+		return $this->getConfigData('montotope');
+	}
+	public function getValorInferior(){
+		return $this->getConfigData('valorinferior');
+	}
+	public function getValorSuperior(){
+		return $this->getConfigData('valorsuperior');
+	}
+	public function getValorComisionImp(){
+		return $this->getConfigData('comisionimp');
+	}
+	public function getValInfFix(){
+		return $this->getConfigData('valinffix');
+	}
+	public function getValSupFix(){
+		return $this->getConfigData('valsupfix');
 	}
 }
