@@ -3,21 +3,25 @@ class Mage_Reembolso_Model_Quote extends Mage_Sales_Model_Quote {
 
 	public function getAmount() {
 		$totals	=	parent::getTotals();
-		$subtotal	= $this->getSubTotalAmount();				//tomo el valor de la compra....
-		//$totals['subtotal']->getData('value');		
-		$valores = Mage::getModel('reembolso/reembolso');
-		$val = $valores->getValorTope();							//tomo el valor tope contra el cual comparar...
-		if($subtotal < $val){ 										
-			if($valores->getValInfFix() == '1'){				//si el valor inferior es fijo.....
-				$amount	= $valores->getValorInferior();
-			}else{													//si el velor inferior es porcentaje....
-				$amount = ($subtotal * $valores->getValorInferior())/ 100;
+		// Tomo el valor de la compra....
+		$subtotal	=	$this->getSubTotalAmount();
+		$valores	=	Mage::getModel('reembolso/reembolso');
+
+		// Tomo el valor tope contra el cual comparar...
+		$val = $valores->getValorTope();
+		if($subtotal < $val){
+			// Si el valor inferior es fijo.....
+			if($valores->getValInfFix() == '1'){
+				$amount	=	$valores->getValorInferior();
+			// Si el velor inferior es porcentaje....
+			} else {
+				$amount	=	($subtotal * $valores->getValorInferior()) / 100;
 			}
 		} else {
 			if($valores->getValSupFix() == '1'){
-				$amount	= $valores->getValorSuperior();
+				$amount	=	$valores->getValorSuperior();
 			}else{
-				$amount = ($subtotal * $valores->getValorSuperior())/100;
+				$amount	=	($subtotal * $valores->getValorSuperior()) /100;
 			}
 		}
 		return $amount;

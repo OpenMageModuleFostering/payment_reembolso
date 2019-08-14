@@ -3,5 +3,10 @@
 		<tr>
 			<td><?php echo $this->__('El pago ser&aacute; realizado en la direcci&oacute;n de destino') ?></td>
 		</tr>
+		<?php if ($this->getMethod()->getCustomTextForm()): ?>
+		<tr>
+			<td><?php echo $this->getMethod()->getCustomTextForm() ?></td>
+		</tr>
+		<?php endif; ?>
 	</table>
 </div>
