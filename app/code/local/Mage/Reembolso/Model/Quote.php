@@ -7,7 +7,7 @@ class Mage_Reembolso_Model_Quote extends Mage_Sales_Model_Quote {
 		if($subtotal < 100){
 			$amount	=	3;
 		} else {
-			$amount	=	$subtotal * 0.3;
+			$amount	=	$subtotal * 0.03;
 		}
 		return $amount;
 	}
