@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/Payment_Reembolso",
+    "type": "magento-module",
+    "license": "OSL-v3.0",
+    "homepage": "",
+    "description": "This is the cash on deluvery paument method.",
+    "authors": [
+    {
+        "name": "Sophie",
+        "email": "lalyostres@gmail.com"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}

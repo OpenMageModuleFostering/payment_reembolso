@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<package>
+    <name>Payment_Reembolso</name>
+    <version>0.1.0</version>
+    <stability>stable</stability>
+    <license uri="http://www.opensource.org/licenses/osl-3.0.php">OSL v3.0</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>This is the cash on deluvery paument method.</summary>
+    <description>This is the cash on deluvery paument method.</description>
+    <notes>*	No notes
+
+CHANGES:
+	-&gt;A	app/code/local/Mage/Reembolso/Block/Form.php
+	-&gt;A	app/code/local/Mage/Reembolso/Block/Info.php
+	-&gt;A	app/code/local/Mage/Reembolso/etc/config.xml
+	-&gt;A	app/code/local/Mage/Reembolso/etc/system.xml
+	-&gt;A	app/code/local/Mage/Reembolso/Model/Reembolso.php
+	-&gt;A	app/code/local/Mage/Reembolso/Model/Quote.php
+	-&gt;A	app/design/adminhtml/default/default/template/reembolso/form.phtml
+	-&gt;A	app/design/adminhtml/default/default/template/reembolso/info.phtml
+	-&gt;A	app/design/frontend/default/default/template/reembolso/form.phtml
+	-&gt;A	app/design/frontend/default/default/template/reembolso/info.phtml
+	-&gt;A	app/etc/modules/Reembolso.xml</notes>
+    <authors><author><name>Sophie</name><user>auto-converted</user><email>lalyostres@gmail.com</email></author></authors>
+    <date>2008-11-26</date>
+    <time>13:18:43</time>
+    <contents><target name="magedesign"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="template"><dir name="reembolso"><file name="form.phtml" hash="ce75a81d61ec34a17aafc9f8c3b22dcc"/><file name="info.phtml" hash="57dfa8759788a77326a833603cb978e6"/></dir></dir></dir></dir></dir><dir name="frontend"><dir name="default"><dir name="default"><dir name="template"><dir name="reembolso"><file name="form.phtml" hash="ce75a81d61ec34a17aafc9f8c3b22dcc"/><file name="info.phtml" hash="57dfa8759788a77326a833603cb978e6"/></dir></dir></dir></dir></dir></target><target name="magelocal"><dir name="Mage"><dir name="Reembolso"><dir name="Block"><file name="Form.php" hash="21f1e325029d98571ec884bca2234e65"/><file name="Info.php" hash="33f48eab752f05362c553b63de5d9c42"/></dir><dir name="etc"><file name="config.xml" hash="6866fb126837a315dce261f387e788d7"/><file name="system.xml" hash="8cb199800d02e44e7f2813f620b018f4"/></dir><dir name="Model"><file name="Quote.php" hash="fc1ff551f8d7306b60b2625d8e41ef07"/><file name="Reembolso.php" hash="4773fdb5ab216ba96bf91f8105b46404"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Reembolso.xml" hash="a5a370ae7cb7f2b0f72b15e7d500f47d"/></dir></target></contents>
+    <compatible/>
+    <dependencies/>
+</package>

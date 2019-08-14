@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<config>
+    <global>
+        <models>
+            <reembolso>
+                <class>Mage_Reembolso_Model</class>
+            </reembolso>
+            <sales>
+                <rewrite>
+                    <quote>Mage_Reembolso_Model_Quote</quote>
+                </rewrite>
+            </sales> 
+        </models>
+
+        <resources>
+            <reembolso_setup>
+                <setup>
+                    <module>Mage_Reembolso</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </reembolso_setup>
+            <reembolso_write>
+                <use>core_write</use>
+            </reembolso_write>
+            <reembolso_read>
+                <use>core_read</use>
+            </reembolso_read>
+        </resources>
+    </global>
+
+    <default>
+        <payment>
+            <reembolso>
+                <active>1</active>
+                <model>reembolso/reembolso</model>
+                <order_status>1</order_status>
+                <title>Reembolso</title>
+                <allowspecific>0</allowspecific>
+            </reembolso>
+         </payment>
+    </default>
+
+    <adminhtml>       
+        <translate>
+            <modules>
+                <Mage_Reembolso>
+                    <files>
+                        <default>Mage_Reembolso.csv</default>
+                    </files>
+                </Mage_Reembolso>
+            </modules>
+        </translate>
+    </adminhtml>
+ 
+    <frontend>       
+        <translate>
+            <modules>
+                <Mage_Reembolso>
+                    <files>
+                        <default>Mage_Reembolso.csv</default>
+                    </files>
+                </Mage_Reembolso>
+            </modules>
+        </translate>        
+    </frontend> 
+</config>
