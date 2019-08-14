@@ -72,6 +72,7 @@ class Mage_Reembolso_Adminhtml_ReembolsoController extends Mage_Adminhtml_Contro
 
 				if ($this->getRequest()->getParam('back')) {
 					$this->_redirect('*/*/edit', array('id' => $model->getId()));
+					Mage::log('PLease: '.$this->_redirect('*/*/edit', array('id' => $model->getId())));
 					return;
 				}
 				$this->_redirect('*/*/');

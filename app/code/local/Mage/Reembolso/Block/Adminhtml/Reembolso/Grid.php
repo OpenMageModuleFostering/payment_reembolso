@@ -33,6 +33,12 @@ class Mage_Reembolso_Block_Adminhtml_Reembolso_Grid extends Mage_Adminhtml_Block
 		  'index'     => 'title',
 		));
 		
+		$this->addColumn('descript', array(
+		  'header'    => Mage::helper('reembolso')->__('Description'),
+		  'align'     =>'left',
+		  'index'     => 'descript',
+		));
+		
 		$this->addColumn('above', array(
 		  'header'    => Mage::helper('reembolso')->__('Above'),
 		  'align'     =>'left',

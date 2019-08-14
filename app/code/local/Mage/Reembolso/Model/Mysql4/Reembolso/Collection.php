@@ -13,6 +13,7 @@ class Mage_Reembolso_Model_Mysql4_Reembolso_Collection extends Mage_Core_Model_M
 			->from(array('main_table'=>$this->getTable('reembolso')),array(
 				'reembolso_id',
 				'title',
+				'descript',
 				'shipping_method',
 				'type',
 				'value',
@@ -23,7 +24,7 @@ class Mage_Reembolso_Model_Mysql4_Reembolso_Collection extends Mage_Core_Model_M
 	}
 	
 	public function getShippingMethods(){
-		$keys=array();
+		$keys	=	array();
 		foreach(Mage::getModel('adminhtml/system_config_source_shipping_allmethods')->toOptionArray() as $key=>$method){
 			$keys[$key.'_'.$key] = $method['label'];
 		}
@@ -59,6 +60,7 @@ class Mage_Reembolso_Model_Mysql4_Reembolso_Collection extends Mage_Core_Model_M
 		
 		$datos['id']		= $items[0]->getData('reembolso_id');
 		$datos['title']		= $items[0]->getData('title');
+		$datos['descript']	= $items[0]->getData('descript');
 		$datos['shipping']	= $items[0]->getData('shipping_method');
 		$datos['type']		= $items[0]->getData('type');
 		$datos['value']		= $items[0]->getData('value');

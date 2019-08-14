@@ -5,12 +5,11 @@ class Mage_Reembolso_Model_Reembolso extends Mage_Payment_Model_Method_Abstract 
 	
 	protected $_formBlockType = 'reembolso/form';
 	protected $_infoBlockType = 'reembolso/info';
-	
+
 	public function isAvailable($quote=null){
 		$allow 	= true;
 		$data	= $this->getShippMethod();
 		
-Mage::log('Error: '.$data['title']);
 		if($data['error']) $allow 	= false;
 		return $allow;
 	}
@@ -38,6 +37,7 @@ Mage::log('Error: '.$data['title']);
 		if($data['error']){
 				$data['id']				= 0;
 				$data['title']			= Mage::helper('adminhtml')->__('Sin definir');
+				$data['descript']		= Mage::helper('adminhtml')->__('Sin definir');
 				$data['shipping']		= Mage::helper('adminhtml')->__('Sin definir');
 				$data['type']			= 1;
 				$data['value']			= 0;
@@ -48,7 +48,22 @@ Mage::log('Error: '.$data['title']);
 		return $data;
 	}
 	
+	// esta casi que ni se usa
 	public function getReembolsoTitle(){		
+		// aca tomo el titulo
+		$data	= $this->getShippMethod();
+		
+		return $data['title'];
+	}
+	
+	public function getReembolsoDescript(){		
+		// aca tomo el titulo
+		$data	= $this->getShippMethod();
+		
+		return $data['descript'];
+	}
+	
+	public function getTitle(){
 		// aca tomo el titulo
 		$data	= $this->getShippMethod();
 		

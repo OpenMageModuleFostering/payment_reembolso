@@ -16,6 +16,13 @@ class Mage_Reembolso_Block_Adminhtml_Reembolso_Edit_Tab_Form extends Mage_Adminh
 		  'name'      => 'title',
 		));
 		
+		$fieldset->addField('descript', 'text', array(
+		  'label'     => Mage::helper('reembolso')->__('Description'),
+		  'class'     => 'required-entry',
+		  'required'  => true,
+		  'name'      => 'descript',
+		));
+		
 		$fieldset->addField('above', 'text', array(
 		  'label'     => Mage::helper('reembolso')->__('Above'),
 		  'class'     => 'required-entry',
