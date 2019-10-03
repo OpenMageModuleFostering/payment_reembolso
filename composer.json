@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/Payment_Reembolso",
+    "name": "OpenMageModuleFostering\/Payment_Reembolso",
     "type": "magento-module",
     "license": "OSL-v3.0",
     "homepage": "",
     "description": "This is the cash on delyvery payment method.",
     "authors": [
-    {
-        "name": "Sophie",
-        "email": "lalyostres@gmail.com"
-    }
-],
+        {
+            "name": "Sophie",
+            "email": "lalyostres@gmail.com"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
